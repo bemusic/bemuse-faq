@@ -265,14 +265,15 @@ export const NotionPage: React.FC<types.PageProps> = ({
         defaultPageCoverPosition={config.defaultPageCoverPosition}
         mapPageUrl={siteMapPageUrl}
         mapImageUrl={mapNotionImageUrl}
-        searchNotion={searchNotion}
+        searchNotion={undefined /* searchNotion */}
         pageFooter={comments}
         pageAside={pageAside}
         footer={
-          <Footer
+          null
+          /* <Footer
             isDarkMode={darkMode.value}
             toggleDarkMode={darkMode.toggle}
-          />
+          /> */
         }
       />
 
