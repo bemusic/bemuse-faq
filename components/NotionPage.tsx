@@ -123,7 +123,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
   //   parsePageId(block.id) === parsePageId(site.rootNotionPageId)
   const isBlogPost =
     block.type === 'page' && block.parent_table === 'collection'
-  const showTableOfContents = !!isBlogPost
+  const showTableOfContents = true // !!isBlogPost
   const minTableOfContentsItems = 3
 
   const socialImage = mapNotionImageUrl(
@@ -216,8 +216,8 @@ export const NotionPage: React.FC<types.PageProps> = ({
 
       <NotionRenderer
         bodyClassName={cs(
-          styles.notion,
-          pageId === site.rootNotionPageId && 'index-page'
+          styles.notion
+          // pageId === site.rootNotionPageId && 'index-page'
         )}
         components={{
           pageLink: ({
